@@ -1,0 +1,35 @@
+{
+  "name": "nodebb-plugin-three-column-page",
+  "version": "1.1.0",
+  "description": "Allows you to add as many new pages as you like to your NodeBB forum",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imshawan/nodebb-plugin-three-column-page"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "static",
+    "custom",
+    "page"
+  ],
+  "author": {
+    "name": "imshawan",
+    "email": "imshawan.dev049@gmail.com"
+  },
+  "nbbpm": {
+    "compatibility": "^1.14.1"
+  },
+  "dependencies": {
+    "async": "3.2.0",
+    "mkdirp": "1.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3"
+  },
+  "license": "MIT License",
+  "readmeFilename": "README.md"
+}

@@ -1,0 +1,28 @@
+{
+	"id": "nodebb-plugin-three-column-page",
+	"name": "Three column page for NodeBB (like facebook) for NodeBB",
+	"description": "Allows you to add and design custom pages with three columns to your NodeBB forum",
+	"url": "https://github.com/imshawan/nodebb-plugin-three-column-page",
+	"library": "./library.js",
+	"hooks": [
+		{
+			"hook": "static:app.load", "method": "init"
+		},
+		{
+			"hook": "filter:admin.header.build", "method": "addAdminNavigation"
+		},
+		{
+			"hook": "filter:widgets.getAreas", "method": "setWidgetAreas"
+		}
+	],
+	"staticDirs": {
+		"static": "./static"
+	},
+	"acpLess": [
+		"static/admin.less"
+	],
+	"acpScripts": [
+		"static/lib/admin.js"
+	],
+	"templates": "./templates"
+}
