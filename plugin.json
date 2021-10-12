@@ -4,6 +4,7 @@
 	"description": "Allows you to add and design custom pages with three columns to your NodeBB forum",
 	"url": "https://github.com/imshawan/nodebb-plugin-three-column-page",
 	"library": "./library.js",
+	"less": "./static/lib/page.less",
 	"hooks": [
 		{
 			"hook": "static:app.load", "method": "init"
