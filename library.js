@@ -46,7 +46,7 @@ plugin.init = async function (params) {
 	});
 
 	var SocketAdmin = require.main.require('./src/socket.io/admin');
-	SocketAdmin.settings.saveCustomPages = async function (socket, data) {
+	SocketAdmin.settings.savePages = async function (socket, data) {
 		await resetWidgets(data);
 		pubsub.publish('three-column-page:save', data);
 		await db.set('plugins:three-column-page', JSON.stringify(data));

@@ -2,17 +2,17 @@
 
 /* globals define, $, socket, app, ajaxify, jQuery */
 
-define('admin/plugins/custom-pages', [], function () {
+define('admin/plugins/three-column-page', [], function () {
 	var admin = {};
 
 	function addCloseHandler() {
-		$('#custom-pages .fa-times').on('click', function () {
+		$('#three-column-page .fa-times').on('click', function () {
 			$(this).parents('.well').remove();
 		});
 	}
 
 	function addTagsInputForGroups(el) {
-		el = el || $('#custom-pages .groups-list');
+		el = el || $('#three-column-page .groups-list');
 
 		el.tagsinput({
 			confirmKeys: [13, 44],
@@ -20,7 +20,7 @@ define('admin/plugins/custom-pages', [], function () {
 		});
 
 		app.loadJQueryUI(function () {
-			var input = $('.page-admin-custom-pages .bootstrap-tagsinput input');
+			var input = $('.page-admin-three-column-page .bootstrap-tagsinput input');
 			input.autocomplete({
 				delay: 100,
 				position: { my: 'left bottom', at: 'left top', collision: 'flip' },
@@ -45,7 +45,7 @@ define('admin/plugins/custom-pages', [], function () {
 	admin.init = function () {
 		$('#add').on('click', function () {
 			var clone = $('.template').clone().removeClass('template hidden');
-			$('#custom-pages').append(clone);
+			$('#three-column-page').append(clone);
 
 			addCloseHandler();
 			addTagsInputForGroups(clone.find('.groups-list'));
@@ -56,7 +56,7 @@ define('admin/plugins/custom-pages', [], function () {
 
 		$('#save').on('click', function () {
 			var arr = [];
-			$('#custom-pages .well form').each(function () {
+			$('#three-column-page .well form').each(function () {
 				var data = $(this).serializeArray();
 				if (data[1].value && !data[1].value.match(' ') && data[1].value !== '') {
 					arr.push({
@@ -67,7 +67,7 @@ define('admin/plugins/custom-pages', [], function () {
 				}
 			});
 
-			socket.emit('admin.settings.saveCustomPages', arr, function () {
+			socket.emit('admin.settings.savePages', arr, function () {
 				app.alertSuccess('Custom pages saved and activated');
 			});
 		});
