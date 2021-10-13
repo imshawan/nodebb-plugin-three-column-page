@@ -52,7 +52,7 @@ plugin.init = async function (params) {
 		await db.set('plugins:three-column-page', JSON.stringify(data));
 	};
 
-	const pages = await getCustomPages();
+	const pages = await getPages();
 	await plugin.saveTemplates(pages);
 };
 
@@ -86,7 +86,7 @@ async function renderCustomPage(req, res) {
 
 async function renderAdmin(req, res) {
 	const [pages, groups] = await Promise.all([
-		getCustomPages(),
+		getPages(),
 		getGroupList(),
 	]);
 	res.render('admin/plugins/three-column-page', {
@@ -95,7 +95,7 @@ async function renderAdmin(req, res) {
 	});
 }
 
-async function getCustomPages() {
+async function getPages() {
 	if (plugin.pagesCache) {
 		return plugin.pagesCache;
 	}
@@ -128,7 +128,7 @@ async function getGroupList() {
 }
 
 plugin.setWidgetAreas = async function (areas) {
-	const data = await getCustomPages();
+	const data = await getPages();
 
 	for (var d in data) {
 		if (data.hasOwnProperty(d)) {
