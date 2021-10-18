@@ -1,6 +1,8 @@
 <div widget-area="customcss">
 	<!-- BEGIN widgets.customcss -->
+	<style>
 	{widgets.customcss.html}
+	</style>
 	<!-- END widgets.customcss -->
 </div>
 
