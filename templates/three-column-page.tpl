@@ -1,3 +1,9 @@
+<div widget-area="customcss">
+	<!-- BEGIN widgets.customcss -->
+	{widgets.customcss.html}
+	<!-- END widgets.customcss -->
+</div>
+
 <div widget-area="header">
 	<!-- BEGIN widgets.header -->
 	{widgets.header.html}
@@ -33,5 +39,15 @@
 	<!-- BEGIN widgets.footer -->
 	{widgets.footer.html}
 	<!-- END widgets.footer -->
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<div widget-area="customjs">
+	<!-- BEGIN widgets.customjs -->
+	<script>
+	{widgets.customjs.html}
+	</script>
+	<!-- END widgets.customjs -->
 </div>
 

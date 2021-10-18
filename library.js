@@ -134,14 +134,14 @@ plugin.setWidgetAreas = async function (areas) {
 		if (data.hasOwnProperty(d)) {
 			areas = areas.concat([
 				{
+					name: data[d].name + ' Custom CSS',
+					template: data[d].route + '.tpl',
+					location: 'customcss',
+				},
+				{
 					name: data[d].name + ' Header',
 					template: data[d].route + '.tpl',
 					location: 'header',
-				},
-				{
-					name: data[d].name + ' Footer',
-					template: data[d].route + '.tpl',
-					location: 'footer',
 				},
 				{
 					name: data[d].name + ' Left Panel',
@@ -157,6 +157,16 @@ plugin.setWidgetAreas = async function (areas) {
 					name: data[d].name + ' Right Panel',
 					template: data[d].route + '.tpl',
 					location: 'sidebar',
+				},
+				{
+					name: data[d].name + ' Custom JavaScript',
+					template: data[d].route + '.tpl',
+					location: 'customjs',
+				},
+				{
+					name: data[d].name + ' Footer',
+					template: data[d].route + '.tpl',
+					location: 'footer',
 				},
 			]);
 		}
