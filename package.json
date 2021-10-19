@@ -1,7 +1,7 @@
 {
   "name": "nodebb-plugin-three-column-page",
   "version": "1.4.1",
-  "description": "Allows you to add as many new pages as you like to your NodeBB forum",
+  "description": "Allows you to create a custom page with three column layout that also Supports addition of custom CSS and JavaScript to your NodeBB forum",
   "main": "library.js",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
     "email": "imshawan.dev049@gmail.com"
   },
   "nbbpm": {
-    "compatibility": "^1.14.1"
+    "compatibility": "^1.14.2"
   },
   "dependencies": {
     "async": "3.2.0",
