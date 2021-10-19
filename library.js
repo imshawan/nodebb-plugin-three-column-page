@@ -159,14 +159,14 @@ plugin.setWidgetAreas = async function (areas) {
 					location: 'sidebar',
 				},
 				{
-					name: data[d].name + ' Custom JavaScript',
-					template: data[d].route + '.tpl',
-					location: 'customjs',
-				},
-				{
 					name: data[d].name + ' Footer',
 					template: data[d].route + '.tpl',
 					location: 'footer',
+				},
+				{
+					name: data[d].name + ' Custom JavaScript',
+					template: data[d].route + '.tpl',
+					location: 'customjs',
 				},
 			]);
 		}
