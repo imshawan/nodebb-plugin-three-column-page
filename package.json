@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-three-column-page",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Allows you to create a custom page with three column layout that also Supports addition of custom CSS and JavaScript to your NodeBB forum",
   "main": "library.js",
   "repository": {
